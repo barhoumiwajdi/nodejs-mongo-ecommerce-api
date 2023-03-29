@@ -1,5 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors')
+const morgan = require('morgan')
 const bodyParser = require('body-parser');
 
 const app = express();
@@ -24,7 +26,7 @@ app.use('/api/v1/orders', order_route);
 const dbConfig = require('./config/database-config');
 
 /* connecting to the database */
-mongoose.connect(dbConfig.URI, {
+mongoose.connect("mongodb://127.0.0.1:27017/E-commerce", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
