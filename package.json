@@ -7,16 +7,11 @@
     "start": "nodemon index.js"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dinushchathurya/nodejs-mongo-stripe-e-commerce-api.git"
+    "type": "git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dinushchathurya/nodejs-mongo-stripe-e-commerce-api/issues"
-  },
-  "homepage": "https://github.com/dinushchathurya/nodejs-mongo-stripe-e-commerce-api#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
