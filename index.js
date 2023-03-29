@@ -4,7 +4,12 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+/* configure midlleware */
+app.use(cors())
+app.use(morgan('combined'))
+
 /* configure body-parser */
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
@@ -23,12 +28,12 @@ mongoose.connect(dbConfig.URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
-.then(() => {
-    console.log("Successfully connected to the database");
-}).catch(err => {
-    console.log('Could not connect to the database. Exiting now...', err);
-    process.exit();
-});
+    .then(() => {
+        console.log("Successfully connected to the database");
+    }).catch(err => {
+        console.log('Could not connect to the database. Exiting now...', err);
+        process.exit();
+    });
 
 /* listen for requests */
 app.listen(3000, () => {
